@@ -21,17 +21,23 @@ body {
     padding: 70px 120px;
     border-radius: 10px;
     background-color: hsl(217, 19%, 24%);
+    font-size: 28px;
+    text-align: center;
+}
+
+.advice {
+    padding: 1em 0;
 }
 
 .dice {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 20px;
+    left: 20px;
 }
 
 .dice-container {
     position: absolute;
-    top: 92%;
+    top: 85%;
     left: 47%;
     z-index: 1;
     cursor: pointer;
@@ -42,18 +48,32 @@ body {
     display: block;
     position: absolute;
     background-color: hsl(150, 100%, 66%);
-    width: 35px;
-    height: 35px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     top: 0px;
     z-index: -1;
 }
 
+.dice-container:hover  .dice {
+    box-shadow: 0 0 40px 10px hsl(150, 100%, 66%), 0 0 80px 10px hsl(150, 100%, 66%);
+}
+
 .advice-heading {
     letter-spacing: 2px;
-    font-size: xx-small;
     position: absolute;
     top: 15%;
     left: 45%;
     color: hsl(150, 100%, 66%);
+}
+
+.divider {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 578px) {
+    .container {
+        padding: 75px 60px;
+    }
 }
